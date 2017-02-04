@@ -96,15 +96,17 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace names
-set $workspace1 "1 "
-set $workspace2 "2 "
-set $workspace3 "3 "
-set $workspace4 "4 "
-set $workspace5 "5 "
+set $workspace1 "1 "
+set $workspace2 "2 "
+set $workspace3 "3 "
+
+set $workspace4 "4"
+set $workspace5 "5"
 set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
+
+set $workspace7 "7 "
+set $workspace8 "8 "
+set $workspace9 "9 "
 set $workspace10 "10 "
 
 # switch to workspace
@@ -132,20 +134,24 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # force programs to workspace
-assign [class="Chromium"] $workspace3
+assign [class="Chromium"] $workspace1
 assign [class="Spotify"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10
-assign [class="TelegramDesktop"] $workspace1
-assign [class="konsole"] $workspace2
-assign [class="Steam"] $workspace4
-assign [class="Atom"] $workspace5
+assign [class="TelegramDesktop"] $workspace7
+assign [class="konsole"] $workspace9
+assign [class="Thunderbird"] $workspace8
+assign [class="Steam"] $workspace2
+assign [title="PlayOnLinux"] $workspace2
+assign [class="Atom"] $workspace3
 
 # move workspace to correct monitor
-workspace $workspace1 output $secondMonitor
+workspace $workspace1 output $mainMonitor
 workspace $workspace2 output $mainMonitor
-workspace $workspace3 output $secondMonitor
-workspace $workspace4 output $mainMonitor
-workspace $workspace5 output $mainMonitor
+workspace $workspace3 output $mainMonitor
+
+workspace $workspace7 output $secondMonitor
+workspace $workspace8 output $secondMonitor
+workspace $workspace9 output $secondMonitor
 workspace $workspace10 output $secondMonitor
 
 
@@ -243,6 +249,7 @@ bar {
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
 	position top
+	tray_output $mainMonitor
 }
 
 # Pulse Audio controls
@@ -298,11 +305,15 @@ for_window [class="Chromium"] border none
 # set osu to floating
 for_window [title="osu!" class="Wine"] floating enable
 
+# set steam to floating
+#for_window [class="Steam"] floating enable
+
 # Autostart desktop programs
 exec chromium
 exec spotify
 exec telegram-desktop
 exec konsole
 exec atom
-
-
+exec steam-native
+exec playonlinux
+exec thunderbird
