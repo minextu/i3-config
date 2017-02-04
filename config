@@ -32,7 +32,7 @@ font pango:Noto Sans 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -220,11 +220,12 @@ bindsym Print exec ~/Dokumente/bash/screenshot.sh
 
 # colors
 set $bg-color 	         #31363b
+set $panel-active-color  #3daee9
 set $inactive-bg-color   #31363b
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
-set $urgent-bg-color     #3daee9
-set $indicator-color	 #3daee9
+set $urgent-bg-color     #f47750
+set $indicator-color	 #f47750
 
 # window colors
 #                       border              background          text                  indicator
@@ -244,7 +245,7 @@ bar {
 		background $bg-color
 	    	separator #757575
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
+		focused_workspace  $panel-active-color $panel-active-color $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}

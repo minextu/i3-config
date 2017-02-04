@@ -46,7 +46,7 @@ bond0} kb/s ${endif} " , "color" : "\#8795a3"},
 ${memperc}<90}"\#5fa384"${else}"\#ff0000"${endif} },
   { "full_text" : "  ${cpu cpu}% ${freq_g 1}Ghz " , "color" : "\#8795a3"},
   { "full_text" : "  ${execi 5 ~/.config/i3/temperature.sh}°C ", "color": 
-	${if_match ${execi 5 ~/.config/i3/temperature.sh}<40}
+	${if_match ${execi 5 ~/.config/i3/temperature.sh}<45}
 		"\#5fa384"
 	${else}
 	${if_match ${execi 5 ~/.config/i3/temperature.sh}<50}
