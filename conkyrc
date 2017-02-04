@@ -36,14 +36,16 @@ TEXT
 # JSON for i3bar
 
  [
-  { "full_text" : "${time %d.%m.%Y %H:%M}" },
-  { "full_text" : " ${execi 300 ~/.config/i3/weather.sh 171045}" },
+  { "full_text" : " 🕑 ${time %d.%m.%Y %H:%M} ", "color" : "\#f3f4f5" },
+  { "full_text" : "  ${execi 300 ~/.config/i3/weather.sh 171045} " , "color" : "\#adb517"},
   { "full_text" : "${execi 5 ~/.config/i3/song_title.sh}" , "color" : "\#3daee9" }, 
-  { "full_text" : " ${fs_free /home} frei" , "color" : "\#8795a3"},
-  { "full_text" : " ${if_up bond0}Up: ${upspeedf bond0} kb/s  Down: ${downspeedf bond0} kb/s ${endif}" , "color" : "\#8795a3"}, 
-  { "full_text" : " ${memperc}%", "color": ${if_match ${memperc}<90}"\#5fa384"${else}"\#ff0000"${endif} },
-  { "full_text" : " ${cpu cpu}% ${freq_g 1}Ghz" , "color" : "\#8795a3"},
-  { "full_text" : " ${execi 5 ~/.config/i3/temperature.sh}°C", "color": 
+  { "full_text" : "  ${fs_free /home} frei" , "color" : "\#8795a3"},
+  { "full_text" : "  ${if_up bond0}Down: ${downspeedf bond0} kb/s  Up: ${upspeedf 
+bond0} kb/s ${endif} " , "color" : "\#8795a3"}, 
+  { "full_text" : "  ${memperc}% ", "color": ${if_match 
+${memperc}<90}"\#5fa384"${else}"\#ff0000"${endif} },
+  { "full_text" : "  ${cpu cpu}% ${freq_g 1}Ghz " , "color" : "\#8795a3"},
+  { "full_text" : "  ${execi 5 ~/.config/i3/temperature.sh}°C ", "color": 
 	${if_match ${execi 5 ~/.config/i3/temperature.sh}<40}
 		"\#5fa384"
 	${else}
@@ -54,6 +56,4 @@ TEXT
 	${endif} 
 	${endif}
   },
-  { "full_text" : " ${execpi 3600 checkupdates | wc -l}", "color" : "\#8795a3" }],
-
-
+  { "full_text" : "  ${execpi 3600 checkupdates | wc -l} ", "color" : "\#8795a3" }],
