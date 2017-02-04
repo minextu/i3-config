@@ -10,6 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $mainMonitor DVI-0
+set $secondMonitor DisplayPort-0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -95,10 +97,10 @@ bindsym $mod+a focus parent
 
 # workspace names
 set $workspace1 "1 "
-set $workspace2 "2 "
-set $workspace3 "3 "
-set $workspace4 "4"
-set $workspace5 "5"
+set $workspace2 "2 "
+set $workspace3 "3 "
+set $workspace4 "4 "
+set $workspace5 "5 "
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
@@ -130,15 +132,29 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # force programs to workspace
-assign [class="Chromium"] $workspace2
+assign [class="Chromium"] $workspace3
 assign [class="Spotify"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10
 assign [class="TelegramDesktop"] $workspace1
-assign [class="konsole"] $workspace3
+assign [class="konsole"] $workspace2
+assign [class="Steam"] $workspace4
+assign [class="Atom"] $workspace5
+
+# move workspace to correct monitor
+workspace $workspace1 output $secondMonitor
+workspace $workspace2 output $mainMonitor
+workspace $workspace3 output $secondMonitor
+workspace $workspace4 output $mainMonitor
+workspace $workspace5 output $mainMonitor
+workspace $workspace10 output $secondMonitor
+
 
 # move virtual desktops between monitors
 bindsym $mod+y move workspace to output left
 bindsym $mod+x move workspace to output right
+
+# kill window on mod+middle click
+bindsym --whole-window $mod+button2 kill
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -189,6 +205,9 @@ mode "$mode_system" {
 }
 bindsym $mod+Pause mode "$mode_system"
 
+bindsym Control+Escape exec ksysguard
+for_window [class="ksysguard"] floating enable
+
 # colors
 set $bg-color 	         #31363b
 set $inactive-bg-color   #31363b
@@ -232,8 +251,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
@@ -250,13 +269,16 @@ exec compton --config ~/.config/compton.conf
 exec_always --no-startup-id feh --randomize --bg-fill ~/Bilder/Hintergruende/neu/ --bg-fill ~/Bilder/Hintergruende/neu/
 
 # set xorg parameters
+exec --no-startup-id xrandr --output $mainMonitor --mode 1920x1080 --rate 60.00 --output $secondMonitor --mode 1600x1200 --rate 60.00 --left-of $mainMonitor
+exec --no-startup-id xrandr --output $mainMonitor --primary
 exec --no-startup-id xset s off # disable display power savinf
 exec --no-startup-id xset m 0 # disable mouse acceleration
 exec --no-startup-id xautolock -time 30 -locker "systemctl suspend" # auto suspend after some time
+exec --no-startup-id setxkbmap -layout de -variant nodeadkeys
 
 # wacom tablet
-exec xsetwacom --set 8 Area 0 0 7045 3963
-exec xsetwacom set "8" MapToOutput DVI-0
+exec xsetwacom --set 8 Area 100 100 7045 3963
+exec xsetwacom set "8" MapToOutput $mainMonitor
 exec xsetwacom set "9" touch off
 exec xsetwacom set "10" Button 1 "key down"
 exec xsetwacom set "10" Button 3 "key up"
@@ -264,8 +286,19 @@ exec xsetwacom set "10" Button 3 "key up"
 # start application runner
 exec --no-startup-id  albert
 
+# network manager
+exec --no-startup-id nm-applet
+
+# hide titlebar in chromium
+for_window [class="Chromium"] border none
+# set osu to floating
+for_window [title="osu!" class="Wine"] floating enable
+
 # Autostart desktop programs
 exec chromium
 exec spotify
 exec telegram-desktop
 exec konsole
+exec atom
+
+
