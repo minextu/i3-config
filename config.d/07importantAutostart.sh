@@ -21,3 +21,6 @@ exec --no-startup-id  albert
 
 # network manager
 exec --no-startup-id nm-applet
+
+# don't mark workspaces as urgent at startup
+exec --no-startup-id bash ~/.config/i3/no-urgent.sh
