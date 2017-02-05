@@ -35,15 +35,3 @@ bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
-
-# force programs to workspace
-assign [class="Chromium"] $workspace1
-assign [class="dolphin"] $workspace2
-assign [class="Steam"] $workspace3
-assign [title="^PlayOnLinux$"] $workspace3
-assign [class="Atom"] $workspace4
-assign [class="TelegramDesktop"] $workspace7
-assign [class="Thunderbird"] $workspace8
-assign [class="konsole"] $workspace9
-assign [class="Spotify"] $workspace10
-for_window [class="Spotify"] move to workspace $workspace10

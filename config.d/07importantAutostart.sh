@@ -11,10 +11,10 @@ exec compton --config ~/.config/compton.conf
 exec_always --no-startup-id feh --randomize --bg-fill ~/Bilder/Hintergruende/neu/ --bg-fill ~/Bilder/Hintergruende/neu/
 
 # set xorg parameters
-exec --no-startup-id xset s off # disable display power savinf
+exec --no-startup-id xset s off # disable display power saving
 exec --no-startup-id xset m 0 # disable mouse acceleration
 exec --no-startup-id xautolock -time 30 -locker "systemctl suspend" # auto suspend after some time
-exec --no-startup-id setxkbmap -layout de -variant nodeadkeys
+exec --no-startup-id setxkbmap -layout de -variant nodeadkeys # set keyboard layout
 
 # start application runner
 exec --no-startup-id  albert

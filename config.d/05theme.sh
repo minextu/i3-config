@@ -44,6 +44,6 @@ bar {
             inactive_workspace $inactive-bg-color  $inactive-bg-color  $inactive-text-color
             urgent_workspace   $urgent-bg-color    $urgent-bg-color    $text-color
         }
-    position top
-    tray_output $mainMonitor
+        position top
+        tray_output $mainMonitor
 }
