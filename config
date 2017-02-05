@@ -97,10 +97,10 @@ bindsym $mod+a focus parent
 
 # workspace names
 set $workspace1 "1 "
-set $workspace2 "2 "
-set $workspace3 "3 "
+set $workspace2 "2 "
+set $workspace3 "3 "
+set $workspace4 "4 "
 
-set $workspace4 "4"
 set $workspace5 "5"
 set $workspace6 "6"
 
@@ -140,14 +140,16 @@ for_window [class="Spotify"] move to workspace $workspace10
 assign [class="TelegramDesktop"] $workspace7
 assign [class="konsole"] $workspace9
 assign [class="Thunderbird"] $workspace8
-assign [class="Steam"] $workspace2
-assign [title="PlayOnLinux"] $workspace2
-assign [class="Atom"] $workspace3
+assign [class="Steam"] $workspace3
+assign [title="^PlayOnLinux$"] $workspace3
+assign [class="Atom"] $workspace4
+assign [class="dolphin"] $workspace2
 
 # move workspace to correct monitor
 workspace $workspace1 output $mainMonitor
 workspace $workspace2 output $mainMonitor
 workspace $workspace3 output $mainMonitor
+workspace $workspace4 output $mainMonitor
 
 workspace $workspace7 output $secondMonitor
 workspace $workspace8 output $secondMonitor
@@ -309,6 +311,9 @@ for_window [title="osu!" class="Wine"] floating enable
 # set steam to floating
 #for_window [class="Steam"] floating enable
 
+# set yakuake to floating
+for_window [class="yakuake"] floating enable
+
 # Autostart desktop programs
 exec chromium
 exec spotify
@@ -318,3 +323,5 @@ exec atom
 exec steam-native
 exec playonlinux
 exec thunderbird
+exec dolphin
+exec yakuake
