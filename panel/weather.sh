@@ -24,5 +24,27 @@ out=`curl --connect-timeout 30 -s http://rss.accuweather.com/rss/liveweather_rss
 cond=`echo $out | cut -d':' -f 1`
 temp=`echo $out | cut -d':' -f 2`
 
+case "$cond" in
+
+'Fog')
+    cond="Nebel"
+    echo -e " \c"
+;;
+'Snow')
+    cond="Schnee"
+    echo -e " \c"
+;;
+'Cloudy')
+    cond="Bewölkt"
+    echo -e " \c"
+;;
+'Sunny')
+    cond="Sonnig"
+   echo -e " \c"
+;;
+*)
+   echo -e  $cond'\c'
+esac
+
 echo -e  $cond'\c'
 echo : $temp
