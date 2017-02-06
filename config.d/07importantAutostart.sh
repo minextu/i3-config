@@ -5,7 +5,7 @@ exec --no-startup-id redshift || redshift -l 49.75:6.64
 exec --no-startup-id volnoti
 
 # start compton
-exec compton --config ~/.config/compton.conf
+exec compton --config ~/.config/i3/compton.conf
 
 # set desktop background
 exec_always --no-startup-id feh --randomize --bg-fill ~/Bilder/Hintergruende/neu/ --bg-fill ~/Bilder/Hintergruende/neu/
