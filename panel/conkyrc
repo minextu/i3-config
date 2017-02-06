@@ -38,7 +38,7 @@ TEXT
 
 [
   { "full_text" : " 🕑 ${time %d.%m.%Y %H:%M} ", "color" : "\#f3f4f5", "name" : "date" },
-  { "full_text" : " ${execi 300 ~/.config/i3/panel/weather.sh 171045} " , "color" : "\#adb517", "name" : "weather"},
+  { "full_text" : " ${execi 300 ~/.config/i3/panel/weather.sh 'trier'} " , "color" : "\#adb517", "name" : "weather"},
   { "full_text" : "${execi 5 ~/.config/i3/panel/song_title.sh}" , "color" : "\#3daee9" },
   { "full_text" : "  ${fs_free /home} frei" , "color" : "\#8795a3", "name" : "space" },
   { "full_text" : "  ${if_up bond0}Down: ${downspeedf bond0} kb/s  Up: ${upspeedf bond0} kb/s ${endif} " , "color" : "\#8795a3"},
