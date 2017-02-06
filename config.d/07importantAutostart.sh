@@ -13,14 +13,20 @@ exec_always --no-startup-id feh --randomize --bg-fill ~/Bilder/Hintergruende/neu
 # set xorg parameters
 exec --no-startup-id xset s off # disable display power saving
 exec --no-startup-id xset m 0 # disable mouse acceleration
-exec --no-startup-id xautolock -time 30 -locker "systemctl suspend" # auto suspend after some time
+exec --no-startup-id xautolock -time 30 -locker "~/.config/i3/i3exit suspend" # auto suspend after some time
 exec --no-startup-id setxkbmap -layout de -variant nodeadkeys # set keyboard layout
 
 # start application runner
-exec --no-startup-id  albert
+exec albert
 
 # network manager
-exec --no-startup-id nm-applet
+exec nm-applet
+
+# clipboard manager
+exec parcellite
+
+# dolphin file indexer
+exec baloo_file
 
 # don't mark workspaces as urgent at startup
 exec --no-startup-id bash ~/.config/i3/no-urgent.sh
