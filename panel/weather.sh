@@ -43,6 +43,10 @@ case "$cond" in
     echo -e " \c"
 ;;
 'Showers')
+    cond="Regenschauer"
+    echo -e " \c"
+;;
+'Rain')
     cond="Regen"
     echo -e " \c"
 ;;
