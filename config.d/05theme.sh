@@ -45,5 +45,4 @@ bar {
             urgent_workspace   $urgent-bg-color    $urgent-bg-color    $text-color
         }
         position top
-        tray_output $mainMonitor
 }
