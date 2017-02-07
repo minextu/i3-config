@@ -41,14 +41,14 @@ TEXT
   { "full_text" : " ${execi 300 ~/.config/i3/panel/weather.sh 'trier'} " , "color" : "\#adb517", "name" : "weather"},
   { "full_text" : "${execi 5 ~/.config/i3/panel/song_title.sh}" , "color" : "\#3daee9" },
   { "full_text" : "  ${fs_free /home} frei" , "color" : "\#8795a3", "name" : "space" },
-  { "full_text" : "  ${if_up bond0}Down: ${downspeedf bond0} kb/s  Up: ${upspeedf bond0} kb/s ${endif} " , "color" : "\#8795a3"},
+  { "full_text" : "  ${if_up wlp3s0b1}Down: ${downspeedf wlp3s0b1} kb/s  Up: ${upspeedf wlp3s0b1} kb/s ${endif} " , "color" : "\#8795a3"},
   { "full_text" : "  ${memperc}% ", "color": ${if_match ${memperc}<90}"\#5fa384"${else}"\#ff0000"${endif} },
   { "full_text" : "  ${cpu cpu}% ${freq_g 1}Ghz " , "color" : "\#8795a3"},
   { "full_text" : "  ${execi 5 ~/.config/i3/panel/temperature.sh}°C ", "name" : "temp", "color":
-    ${if_match ${execi 5 ~/.config/i3/panel/temperature.sh}<45}
+    ${if_match ${execi 5 ~/.config/i3/panel/temperature.sh}<55}
         "\#5fa384"
     ${else}
-    ${if_match ${execi 5 ~/.config/i3/panel/temperature.sh}<50}
+    ${if_match ${execi 5 ~/.config/i3/panel/temperature.sh}<60}
         "\#885500"
     ${else}
         "\#ff0000"

@@ -1,2 +1,2 @@
 #!/bin/bash
-sensors | grep temp2 | cut -c16-17
+sensors | grep "Core 1" | cut -c18-19
