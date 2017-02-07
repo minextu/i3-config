@@ -5,4 +5,4 @@ exec dolphin
 exec yakuake
 
 # touchpad
-exec --no-startup-id synclient TapButton1=1 TapButton2=1 TapButton3=1
+exec --no-startup-id synclient TapButton1=1 TapButton2=3 TapButton3=2
