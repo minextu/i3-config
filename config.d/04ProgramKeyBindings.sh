@@ -43,8 +43,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id bash ~/.config/i3/volume.sh do
 bindsym XF86AudioMute exec --no-startup-id bash ~/.config/i3/volume.sh mute
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPause exec playerctl play-pause
