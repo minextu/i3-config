@@ -55,4 +55,13 @@ TEXT
     ${endif}
     ${endif}
   },
+  ${if_existing /sys/class/power_supply/AC/online 0}
+    ${if_match ${battery_percent BAT0} <= 20}
+        { "full_text" : "  ${battery_percent} % ", "color" : "\#ff0000"},
+    $else
+        { "full_text" : "   ${battery_percent} % ", "color" : "\#5fa384"},
+    $endif
+  $else
+    { "full_text" : "  ${battery_percent} % ", "color" : "\#5fa384"},
+  $endif
   { "full_text" : "  ${execpi 3600 checkupdates | wc -l} ", "color" : "\#8795a3", "name" : "updates"}],
