@@ -22,7 +22,7 @@ out=`curl --connect-timeout 30 -s http://rss.accuweather.com/rss/liveweather_rss
 #echo $out
 
 cond=`echo $out | cut -d':' -f 1`
-temp=`echo $out | cut -d':' -f 2`
+temp=`echo $(echo $out | cut -d':' -f 2 | tr -d C)°C`
 
 case "$cond" in
 
@@ -48,6 +48,10 @@ case "$cond" in
 ;;
 'Rain')
     cond="Regen"
+    echo -e " \c"
+;;
+'Partly Cloudy W/ Showers')
+    cond="Teilweise bewölkt + Regenschauer"
     echo -e " \c"
 ;;
 *)
