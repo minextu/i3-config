@@ -40,7 +40,15 @@ case "$cond" in
 ;;
 'Sunny')
     cond="Sonnig"
-   echo -e " \c"
+    echo -e " \c"
+;;
+'Showers')
+    cond="Regenschauer"
+    echo -e " \c"
+;;
+'Rain')
+    cond="Regen"
+    echo -e " \c"
 ;;
 *)
    echo -e  $cond'\c'
