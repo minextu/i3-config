@@ -1,0 +1,1 @@
+set $mainMonitor "eDP1"
