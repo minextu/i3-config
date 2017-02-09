@@ -54,6 +54,10 @@ case "$cond" in
     cond="Teilweise bewölkt + Regenschauer"
     echo -e " \c"
 ;;
+'Mostly Cloudy')
+    cond="Meist bewölkt"
+    echo -e " \c"
+;;
 *)
    echo -e  $cond'\c'
 esac
