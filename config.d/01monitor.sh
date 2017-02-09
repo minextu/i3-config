@@ -1,6 +1,6 @@
 # monitor config
 set $mainMonitor DVI-0
-set $secondMonitor DisplayPort-0
+set $secondMonitor DVI-1
 
 # move workspace to correct monitor
 workspace $workspace1 output $mainMonitor
