@@ -8,6 +8,7 @@ workspace $workspace2 output $mainMonitor
 workspace $workspace3 output $mainMonitor
 workspace $workspace4 output $mainMonitor
 
+workspace $workspace6 output $secondMonitor
 workspace $workspace7 output $secondMonitor
 workspace $workspace8 output $secondMonitor
 workspace $workspace9 output $secondMonitor

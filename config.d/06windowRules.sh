@@ -1,5 +1,6 @@
 # hide titlebar in chromium
 for_window [class="Chromium"] border none
+for_window [class="tv"] border none
 
 # set some programs to floating
 for_window [title="osu!" class="Wine"] floating enable
@@ -12,6 +13,7 @@ assign [class="dolphin"] $workspace2
 assign [class="Steam"] $workspace3
 assign [title="^PlayOnLinux$"] $workspace3
 assign [class="Atom"] $workspace4
+assign [class="tv"] $workspace6
 assign [class="TelegramDesktop"] $workspace7
 assign [class="Thunderbird"] $workspace8
 assign [class="konsole"] $workspace9
