@@ -4,7 +4,7 @@ audioPlaying=$(pacmd list-sink-inputs | grep -c 'state: RUNNING')
 program=$(pacmd list-sink-inputs | sed -e ':a' -e 'N' -e '$!ba' -re 's/^.*state: RUNNING.*?application.name = "([^"]*).*$/\1/')
 
 
-if [ $audioPlaying = "1" ]; then
+if [ $audioPlaying -gt 0 ]; then
 
     # disable xautolock
     xautolock -disable
