@@ -1,9 +1,9 @@
 # wacom tablet
-exec xsetwacom --set 8 Area 100 100 7045 3963
-exec xsetwacom set "8" MapToOutput $mainMonitor
-exec xsetwacom set "9" touch off
-exec xsetwacom set "10" Button 1 "key down"
-exec xsetwacom set "10" Button 3 "key up"
+exec_always xsetwacom --set "Wacom Intuos PT M Pen stylus" Area 100 100 7045 3963
+exec_always xsetwacom set "Wacom Intuos PT M Pen stylus" MapToOutput $mainMonitor
+exec_always xsetwacom set "Wacom Intuos PT M Finger touch" touch off
+exec_always xsetwacom set "Wacom Intuos PT M Pad pad" Button 1 "key down"
+exec_always xsetwacom set "Wacom Intuos PT M Pad pad" Button 3 "key up"
 
 # Autostart desktop programs
 exec chromium
