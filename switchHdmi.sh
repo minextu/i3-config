@@ -2,8 +2,8 @@
 mainMonitor=$1
 status=$2
 
-internalSink=0
-hdmiSink=1
+internalSink=1
+hdmiSink=0
 
 moveSink () {
     echo "Setting default sink to: $1";
