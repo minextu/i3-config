@@ -50,6 +50,15 @@ while read; do
             "space")
                 filelight /home &> /dev/null &
                 ;;
+            "battery")
+                currentMode=$name
+                batX=$(expr $x - 150)
+                (
+                    echo "^bg($panelColor)^fg(#ffffff) Batterie";
+                    # strip min, low and high values
+                    upower -i $(upower -e | grep 'BAT')
+                ) | dzen2 $dzenArgs -l 20 -x $batX -w 300 &
+                ;;
             "temp")
                 currentMode=$name
                 tempX=$(expr $x - 100)
