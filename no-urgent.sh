@@ -1,7 +1,7 @@
 #!/bin/bash
-# removes urgent status from all workpaces for the first 10 seconds
+# removes urgent status from all workpaces for the first 20 seconds
 
-seconds=10
+seconds=20
 until [ $seconds -lt 0 ]; do
     let seconds-=1
     sleep 1
