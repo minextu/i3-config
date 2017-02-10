@@ -16,6 +16,5 @@ assign [class="Atom"] $workspace4
 assign [class="tv"] $workspace6
 assign [class="TelegramDesktop"] $workspace7
 assign [class="Thunderbird"] $workspace8
-assign [class="konsole"] $workspace9
 assign [class="Spotify"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10

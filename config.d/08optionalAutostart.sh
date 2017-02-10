@@ -13,10 +13,13 @@ exec chromium
 exec chromium "http://youtube.com" --new-window "http://tv.et.tc" --user-data-dir=/home/jan/.config/chromium/tv --class="tv"
 exec spotify
 exec telegram-desktop
-exec konsole
+exec --no-startup-id i3-msg "workspace $workspace9; exec konsole"
 exec atom
 exec steam-native
 exec playonlinux
 exec thunderbird
 exec dolphin
 exec yakuake
+
+# switch to workspace 1 again
+exec --no-startup-id sleep 2; i3-msg workspace $workspace1
