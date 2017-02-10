@@ -21,5 +21,7 @@ exec thunderbird
 exec dolphin
 exec yakuake
 
+# show workspace 8
+exec --no-startup-id sleep 2; i3-msg workspace $workspace8
 # switch to workspace 1 again
-exec --no-startup-id sleep 2; i3-msg workspace $workspace1
+exec --no-startup-id sleep 3; i3-msg workspace $workspace1
