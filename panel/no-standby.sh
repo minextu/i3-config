@@ -16,5 +16,5 @@ if [ $audioPlaying -gt 0 ]; then
             xset dpms
     fi
 
-    echo "  $program "
+    echo "  $program "
 fi
