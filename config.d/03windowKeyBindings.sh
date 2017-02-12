@@ -4,17 +4,20 @@ floating_modifier $mod
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# mouse follows focus
+set $movemouse "sh -c 'eval `xdotool getactivewindow getwindowgeometry --shell`; xdotool mousemove $((X+WIDTH/2)) $((Y+HEIGHT/2))'"
+
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+j focus left; exec $movemouse
+bindsym $mod+k focus down; exec $movemouse
+bindsym $mod+l focus up; exec $movemouse
+bindsym $mod+odiaeresis focus right; exec $movemouse
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Left focus left; exec $movemouse
+bindsym $mod+Down focus down; exec $movemouse
+bindsym $mod+Up focus up; exec $movemouse
+bindsym $mod+Right focus right; exec $movemouse
 
 # move focused window
 bindsym $mod+Shift+j move left
