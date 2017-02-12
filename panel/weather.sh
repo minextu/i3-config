@@ -74,8 +74,11 @@ case "$cond" in
     cond="Windböen"
     echo -e " \c"
 ;;
+'Clear')
+    cond="Klar"
+    echo -e " \c"
+;;
 *)
-   echo -e  $cond'\c'
 esac
 
 echo -e  $cond'\c'
