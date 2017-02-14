@@ -15,12 +15,7 @@ if [ -z $1 ]; then
     exit 0;
 fi
 
-#curl -s http://rss.accuweather.com/rss/liveweather_rss.asp\?metric\=${METRIC}\&locCode\=$1 | perl -ne 'if (/Currently/) {chomp;/\<title\>Currently: (.*)?\<\/title\>/; print "$1"; }'
-
 out=`curl --connect-timeout 30 -s http://rss.accuweather.com/rss/liveweather_rss.asp\?metric\=${METRIC}\&locCode\=$1 | perl -ne 'if (/Currently/) {chomp;/\<title\>Currently: (.*)?\<\/title\>/; print "$1"; }'`
-
-#echo $out
-
 cond=`echo $out | cut -d':' -f 1`
 temp=`echo $(echo $out | cut -d':' -f 2 | tr -d C)°C`
 
@@ -78,8 +73,12 @@ case "$cond" in
     cond="Klar"
     echo -e " \c"
 ;;
+'Mostly Clear')
+    cond="Meist klar"
+    echo -e " \c"
+;;
 *)
 esac
 
-echo -e  $cond'\c'
+echo -e $cond'\c'
 echo : $temp
