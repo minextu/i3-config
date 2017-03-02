@@ -69,6 +69,10 @@ case "$cond" in
     cond="Meist bewölkt + Windböen"
     echo -e " \c"
 ;;
+'Mostly Cloudy W/ Showers')
+    cond="Meist bewölkt + Schauer"
+    echo -e " \c"
+;;
 'Flurries')
     cond="Windböen"
     echo -e " \c"
