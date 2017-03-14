@@ -4,7 +4,7 @@
 sudo pacman -Sy --needed\
  i3-wm i3lock xautolock notify-osd\
  conky ttf-font-awesome numix-icon-theme-git filelight dzen2 playerctl pamixer\
- feh compton albert network-manager-applet parcellite volnoti redshift
+ feh compton albert network-manager-applet parcellite volnoti redshift lxqt-policykit
 
 # generate config
 ./generateConfig.sh

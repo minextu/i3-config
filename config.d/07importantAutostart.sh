@@ -26,6 +26,9 @@ exec nm-applet
 # clipboard manager
 exec parcellite
 
+# polkit agent
+exec --no-startup-id lxqt-policykit-agent
+
 # dolphin file indexer
 exec baloo_file
 
