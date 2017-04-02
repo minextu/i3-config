@@ -1,5 +1,6 @@
 # Autostart desktop programs
-exec chromium
+exec firefox
+
 exec dolphin
 exec yakuake
 exec thunderbird
