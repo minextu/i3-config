@@ -9,7 +9,7 @@ exec_always xsetwacom set "Wacom Intuos PT M Pad pad" Button 1 "key +XF86AudioLo
 exec_always xsetwacom set "Wacom Intuos PT M Pad pad" Button 3 "key +XF86AudioRaiseVolume"
 
 # Autostart desktop programs
-exec chromium
+exec firefox
 exec chromium "http://youtube.com" --new-window "http://tv.et.tc" --user-data-dir=/home/jan/.config/chromium/tv --class="tv"
 exec spotify
 exec telegram-desktop
