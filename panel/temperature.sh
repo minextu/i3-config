@@ -1,2 +1,2 @@
 #!/bin/bash
-sensors | grep "Core 1" | cut -c18-19
+sensors | grep "Core 1" | cut -c17-18
