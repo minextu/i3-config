@@ -42,7 +42,7 @@ while read; do
                 ) | dzen2 $dzenArgs -x $calX -w 160 -l 7 &
                 ;;
             "weather")
-                 chromium "http://www.accuweather.com/de/de/trier/54290/hourly-weather-forecast/171045?lang=de" &> /dev/null &
+                firefox "http://www.accuweather.com/de/de/trier/54290/hourly-weather-forecast/171045?lang=de" &> /dev/null &
                  ;;
             "updates")
                 konsole -e "bash -c 'sudo pacman -Syu; read -rsp $\"Ende...\" key'"
