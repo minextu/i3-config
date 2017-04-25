@@ -37,6 +37,10 @@ case "$cond" in
     cond="Sonnig"
     echo -e " \c"
 ;;
+'Partly Sunny W/ Showers')
+    cond="Teilweise sonnig + Regenschauer"
+    echo -e " \c"
+;;
 'Partly Sunny')
     cond="Teilweise sonnig"
     echo -e " \c"
