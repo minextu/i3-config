@@ -1,4 +1,5 @@
 ## Installation
+The setup does only work on Archlinux for now!
 
 1. Clone this repository into .config
 ```
