@@ -1,5 +1,5 @@
 ## Installation
-The setup does only work on Archlinux for now!
+The setup does only work on Archlinux for now. You may also need to install some missing packages via the aur first.
 
 1. Clone this repository into .config
 ```
@@ -8,6 +8,6 @@ cd ~/.config/i3
 ```
 2. Run setup.sh
 ```
-./setup.sh
+./scripts/setup.sh
 ```
 3. start i3

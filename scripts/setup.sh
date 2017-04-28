@@ -7,4 +7,4 @@ sudo pacman -Sy --needed\
  feh compton albert network-manager-applet parcellite volnoti redshift lxqt-policykit
 
 # generate config
-./generateConfig.sh
+./scripts/generateConfig.sh
