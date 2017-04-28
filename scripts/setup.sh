@@ -8,4 +8,4 @@ sudo pacman -Sy --needed\
  upower tlp
 
 # generate config
-./generateConfig.sh
+./scripts/generateConfig.sh
