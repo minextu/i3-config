@@ -51,3 +51,6 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# keyboard layout
+bindsym $mod+k exec --no-startup-id bash ~/.config/i3/scripts/toggleKeymap.sh
