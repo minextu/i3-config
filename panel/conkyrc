@@ -6,7 +6,7 @@ background no
 max_text_width 0
 
 # Update interval in seconds
-update_interval 2.0
+update_interval 1
 
 # This is the number of times Conky will update before quitting.
 # Set to zero to run forever.
@@ -40,7 +40,7 @@ TEXT
   { "full_text" : "  ${time %a, %d.%m.%Y %H:%M} ", "color" : "\#f3f4f5", "name" : "date" },
   { "full_text" : " ${execi 300 ~/.config/i3/panel/weather.sh 'trier'} " , "color" : "\#adb517", "name" : "weather"},
   { "full_text" : "${execi 10 ~/.config/i3/panel/no-standby.sh}" , "color" : "\#3daee9" },
-  { "full_text" : "${execi 5 ~/.config/i3/panel/song_title.sh}" , "color" : "\#1ed660" },
+  { "full_text" : "${exec ~/.config/i3/panel/song_title.sh}" , "color" : "\#1ed660" },
   { "full_text" : "  ${fs_free /home} frei" , "color" : "\#8795a3", "name" : "space" },
   { "full_text" : "  ${if_up bridge0}Down: ${downspeedf bridge0} kb/s  Up: ${upspeedf bridge0} kb/s ${endif} " , "color" : "\#8795a3"},
   { "full_text" : "  ${memperc}% ", "color": ${if_match ${memperc}<90}"\#5fa384"${else}"\#ff0000"${endif} },
