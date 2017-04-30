@@ -29,9 +29,9 @@ bindsym $mod+Pause mode "$mode_system"
 set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
 mode "$mode_display" {
     bindsym v exec --no-startup-id xrandr --output VGA1 --auto --same-as $mainMonitor, mode "default"
-    bindsym h exec --no-startup-id bash ~/.config/i3/switchHdmi.sh "$mainMonitor" "on", mode "default"
+    bindsym h exec --no-startup-id bash ~/.config/i3/scripts/switchHdmi.sh "$mainMonitor" "on", mode "default"
     bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
-    bindsym y exec --no-startup-id bash ~/.config/i3/switchHdmi.sh "$mainMonitor" "off", mode "default"
+    bindsym y exec --no-startup-id bash ~/.config/i3/scripts/switchHdmi.sh "$mainMonitor" "off", mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
