@@ -1,3 +1,6 @@
+## Screenshot
+![screenshot](https://cloud.et.tc/index.php/s/BJDXKdXrxfuFFTA/download)
+
 ## Installation
 The setup does only work on Archlinux for now. You may also need to install some missing packages via the aur first.
 

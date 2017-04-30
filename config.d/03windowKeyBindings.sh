@@ -7,25 +7,25 @@ bindsym $mod+Shift+q kill
 # mouse follows focus
 set $movemouse "sh -c 'eval `xdotool getactivewindow getwindowgeometry --shell`; xdotool mousemove $((X+WIDTH/2)) $((Y+HEIGHT/2))'"
 
-# change focus
-bindsym $mod+j focus left; exec $movemouse
-bindsym $mod+k focus down; exec $movemouse
-bindsym $mod+l focus up; exec $movemouse
-bindsym $mod+odiaeresis focus right; exec $movemouse
+# change focus vi style
+#bindsym $mod+j focus left; exec $movemouse
+#bindsym $mod+k focus down; exec $movemouse
+#bindsym $mod+l focus up; exec $movemouse
+#bindsym $mod+odiaeresis focus right; exec $movemouse
 
-# alternatively, you can use the cursor keys:
+# change focus cursor keys:
 bindsym $mod+Left focus left; exec $movemouse
 bindsym $mod+Down focus down; exec $movemouse
 bindsym $mod+Up focus up; exec $movemouse
 bindsym $mod+Right focus right; exec $movemouse
 
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+# move focused window vi style
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+odiaeresis move right
 
-# alternatively, you can use the cursor keys:
+# move focused window cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
