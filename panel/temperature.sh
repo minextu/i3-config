@@ -1,2 +1,2 @@
 #!/bin/bash
-sensors | grep temp2 | cut -c16-17
+sensors | grep -oP 'Package id 0.*?\+\K[0-9]+'
