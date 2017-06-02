@@ -1,7 +1,8 @@
 #!/bin/sh
 panelColor="#30353a"
 panelSecondColor="#3daee9"
-dzenArgs="-y 20 -fg #6c6c6c -bg $panelColor -fn xft:Terminus:size=10 -p -ta c -e onstart=uncollapse;button1=exit;button3=exit"
+dzenArgs="-y 20 -fg #6c6c6c -bg $panelColor -fn Monospace:size=10
+ -p -ta c -e onstart=uncollapse;button1=exit;button3=exit"
 
 # Send the header so that i3bar knows we want to use JSON:
 echo '{"version" : 1, "click_events": true }'
