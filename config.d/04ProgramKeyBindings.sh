@@ -24,6 +24,19 @@ mode "$mode_system" {
 }
 bindsym $mod+Pause mode "$mode_system"
 
+
+# external monitor
+set $mode_display Ext Screen (x) HDMI clone, (y) HDMI extend
+mode "$mode_display" {
+    bindsym x exec --no-startup-id bash ~/.config/i3/scripts/switchHdmi.sh "$mainMonitor" "clone", mode "default"
+    bindsym y exec --no-startup-id bash ~/.config/i3/scripts/switchHdmi.sh "$mainMonitor" "extend", mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+p mode "$mode_display"
+
 # program launcher
 bindsym $mod+d exec albert toggle
 

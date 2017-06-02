@@ -1,6 +1,7 @@
 # monitor config
-set $mainMonitor DisplayPort-0
-set $secondMonitor DVI-0
+set $mainMonitor DVI-0
+set $secondMonitor DisplayPort-0
+set $tv HDMI-0
 
 # move workspace to correct monitor
 workspace $workspace1 output $mainMonitor
@@ -15,5 +16,7 @@ workspace $workspace9 output $secondMonitor
 workspace $workspace10 output $secondMonitor
 
 # init monitors
-exec --no-startup-id xrandr --output $mainMonitor --mode 1920x1080 --rate 60.00 --output $secondMonitor --mode 1600x1200 --rate 60.00 --left-of $mainMonitor
-exec --no-startup-id xrandr --output $mainMonitor --primary
+exec_always --no-startup-id xrandr --output $mainMonitor --mode 1920x1080 --rate 60.00
+exec_always --no-startup-id xrandr --output $secondMonitor --mode 1600x1200 --rate 60.00 --left-of $mainMonitor
+exec_always --no-startup-id xrandr --output $tv --mode 1920x1080 --rate 60.00 --same-as $mainMonitor
+exec_always --no-startup-id xrandr --output $mainMonitor --primary
