@@ -34,3 +34,6 @@ exec baloo_file
 
 # don't mark workspaces as urgent at startup
 exec --no-startup-id bash ~/.config/i3/scripts/no-urgent.sh
+
+# start pulseaudio
+exec --no-startup-id pulseaudio -D
