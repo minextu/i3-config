@@ -1,6 +1,9 @@
 # Start redshift in auto mode, fallback to trier if it fails to detect gps
 exec --no-startup-id redshift || redshift -l 49.75:6.64
 
+# start notify daemon
+exec --no-startup-id dunst
+
 # start volnoti (volume notification)
 exec --no-startup-id volnoti
 
@@ -34,6 +37,3 @@ exec baloo_file
 
 # don't mark workspaces as urgent at startup
 exec --no-startup-id bash ~/.config/i3/scripts/no-urgent.sh
-
-# start pulseaudio
-exec --no-startup-id pulseaudio -D
