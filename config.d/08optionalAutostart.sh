@@ -1,3 +1,4 @@
+
 # Autostart desktop programs
 exec firefox
 

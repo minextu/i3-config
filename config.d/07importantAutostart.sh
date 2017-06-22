@@ -1,6 +1,9 @@
 # Start redshift in auto mode, fallback to trier if it fails to detect gps
 exec --no-startup-id redshift || redshift -l 49.75:6.64
 
+# start notify daemon
+exec --no-startup-id dunst
+
 # start volnoti (volume notification)
 exec --no-startup-id volnoti
 

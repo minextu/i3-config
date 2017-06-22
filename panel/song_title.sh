@@ -11,11 +11,11 @@ if [[ "$status" == 'Playing' ]]; then
   string="$artist - $title"
   start=$(cat $tmpFile)
   let "start=start+5"
-  let "end=start+70"
+  let "end=start+45"
 
   if [ $end -ge ${#string} ]; then
       start=1
-      let "end=start+70"
+      let "end=start+"
   fi
 
   echo -n $start > $tmpFile
@@ -23,7 +23,7 @@ if [[ "$status" == 'Playing' ]]; then
   stringShort=$(echo $string | cut -c$start-$end)
 
 
-  echo -n " 𝅘𝅥𝅮 $stringShort"
+  echo -n " 𝅘𝅥𝅮 $stringShort" | iconv -c
 
 
 fi
