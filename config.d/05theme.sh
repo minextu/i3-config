@@ -16,7 +16,7 @@ font pango: Noto Sans 9, FontAwesome 9
 # colors
 set $bg-color 	         #31363b
 set $panel-active-color  #3daee9
-set $inactive-bg-color   #31363b
+set $inactive-bg-color   #232629
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #f47750
