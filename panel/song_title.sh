@@ -15,7 +15,7 @@ if [[ "$status" == 'Playing' ]]; then
 
   if [ $end -ge ${#string} ]; then
       start=1
-      let "end=start+"
+      let "end=start+45"
   fi
 
   echo -n $start > $tmpFile
@@ -23,7 +23,7 @@ if [[ "$status" == 'Playing' ]]; then
   stringShort=$(echo $string | cut -c$start-$end)
 
 
-  echo -n " 𝅘𝅥𝅮 $stringShort" | iconv -c
+  echo -n "  $stringShort" | iconv -c
 
 
 fi
