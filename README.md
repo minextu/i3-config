@@ -6,7 +6,7 @@ The setup does only work on Archlinux for now. You may also need to install some
 
 1. Clone this repository into .config
 ```
-git clone git@git.et.tc:Jan/i3-config.git ~/.config/i3
+git clone https://github.com/minextu/i3-config.git ~/.config/i3
 cd ~/.config/i3
 ```
 2. Run setup.sh
