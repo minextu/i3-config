@@ -1,7 +1,5 @@
 
 # Autostart desktop programs
-exec firefox
-
 exec dolphin
 exec yakuake
 

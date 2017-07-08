@@ -19,12 +19,12 @@ moveSink () {
 
 if [ $status = "on" ]; then
     # turn on screen
-    xrandr --output HDMI1 --auto --same-as $mainMonitor
+    xrandr --output HDMI-1 --auto --same-as $mainMonitor
     # move all audio streams to hdmi
     moveSink $hdmiSink
 else
     # turn off stream
-    xrandr --output HDMI1 --off
+    xrandr --output HDMI-1 --off
     # move all streams back to internal sink
     moveSink $internalSink
 fi

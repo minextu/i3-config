@@ -1,2 +1,2 @@
 
-set $mainMonitor "eDP1"
+set $mainMonitor "eDP-1"
