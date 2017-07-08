@@ -18,7 +18,7 @@ exec atom
 exec playonlinux
 exec thunderbird
 exec dolphin
-exec yakuake
+exec --no-startup-id yakuake
 
 # show workspace 8
 exec --no-startup-id sleep 4; i3-msg workspace $workspace8
